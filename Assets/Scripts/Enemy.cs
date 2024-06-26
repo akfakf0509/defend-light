@@ -9,6 +9,10 @@ public class Enemy : MonoBehaviour
 
 	public float speed = 1.0f;
 
+	private void Awake()
+	{
+		target = GameObject.FindGameObjectWithTag("Player");
+	}
 	private void FixedUpdate()
 	{
 		Vector3 direction = (target.transform.position - transform.position).normalized;

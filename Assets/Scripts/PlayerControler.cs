@@ -1,21 +1,13 @@
 using UnityEngine;
-using UnityEngine.Pool;
 
 public class PlayerControler : MonoBehaviour
 {
 	[SerializeField] private GameObject bullet;
 	[SerializeField] private Rigidbody2D rb;
 
-	private IObjectPool<GameObject> bulletPool;
-
 	public float moveSpeed = 1.0f;
 
 	Vector2 moveDirection;
-
-	private void Awake()
-	{
-		bulletPool = new ObjectPool<GameObject>(() => Instantiate(bullet));
-	}
 
 	private void Update()
 	{
@@ -28,7 +20,7 @@ public class PlayerControler : MonoBehaviour
 			Vector3 mouseDirection = mouseWordPos - transform.position;
 			float angle = Vector2.Angle(transform.up, mouseDirection);
 			angle *= Vector2.Dot(-transform.right, mouseDirection) > .0f ? 1 : -1;
-			GameObject newBullet = bulletPool.Get();
+			GameObject newBullet = Instantiate(bullet);
 			newBullet.transform.position = transform.position;
 			newBullet.transform.Rotate(new Vector3(0, 0, angle));
 		}
