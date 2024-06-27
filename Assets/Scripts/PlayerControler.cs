@@ -23,6 +23,7 @@ public class PlayerControler : MonoBehaviour
 			GameObject newBullet = Instantiate(bullet);
 			newBullet.transform.position = transform.position;
 			newBullet.transform.Rotate(new Vector3(0, 0, angle));
+			newBullet.GetComponent<Bullet>().owner = gameObject;
 		}
 	}
 	private void FixedUpdate()

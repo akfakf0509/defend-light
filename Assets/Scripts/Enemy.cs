@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,5 +16,9 @@ public class Enemy : MonoBehaviour
 	{
 		Vector3 direction = (target.transform.position - transform.position).normalized;
 		rb.MovePosition(rb.position + (Vector2)direction * speed);
+	}
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		Destroy(gameObject);
 	}
 }

@@ -151,9 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72103df68db559449e3b1ab8ac80d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1983212320}
   enemy: {fileID: 3031331641697766140, guid: 5088231c7e91bc24082ff67015838f88, type: 3}
   spawnDelay: 3
-  maxEnemyCount: 5
+  spawnDistance: 10
 --- !u!4 &251474226
 Transform:
   m_ObjectHideFlags: 0
