@@ -650,8 +650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadf7c52eb516844db230aefaa6e6174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collder: {fileID: 1983212322}
   bullet: {fileID: 1462028617843842632, guid: a56a01ad040f7344fb3ea1e24fa96d9a, type: 3}
   rb: {fileID: 1983212321}
+  shootPerSeconds: 1
   moveSpeed: 0.2
 --- !u!4 &1983212324
 Transform:

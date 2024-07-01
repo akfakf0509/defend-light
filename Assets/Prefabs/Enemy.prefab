@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 829553666657670062}
   - component: {fileID: 41826004745817701}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,6 +132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  body: {fileID: 131964472452613702}
+  destoryEffect: {fileID: 3271553094442076739, guid: b7eb157b00fe85941919e4633e4adadb, type: 3}
   rb: {fileID: 306254346206842723}
   speed: 0.1
 --- !u!61 &2825268843919463051
