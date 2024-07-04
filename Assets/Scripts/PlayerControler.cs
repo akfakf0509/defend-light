@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -34,5 +35,9 @@ public class PlayerControler : MonoBehaviour
 	private void FixedUpdate()
 	{
 		rb.MovePosition(rb.position + moveDirection.normalized * moveSpeed);
+	}
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		SceneManager.LoadScene(0);
 	}
 }
