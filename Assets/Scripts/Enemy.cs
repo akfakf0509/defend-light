@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		Destroy(gameObject);
+		ScoreManager.scoreAddEvent.Invoke(1);
 		GameObject newDestoryEffect = Instantiate(destoryEffect);
 		newDestoryEffect.transform.position = collision.GetContact(0).point;
 		newDestoryEffect.transform.eulerAngles = collision.gameObject.transform.eulerAngles;
