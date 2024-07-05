@@ -10,7 +10,7 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private int spawnDelay = 3;
 	[SerializeField] private int spawnDistance = 10;
 
-	private float lastSpawnedTime = 0;
+	private float lastSpawnedTime = -2;
 	private void FixedUpdate()
 	{
 		if (Time.time - lastSpawnedTime >= spawnDelay)

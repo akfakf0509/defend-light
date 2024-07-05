@@ -13,7 +13,7 @@ public class PlayerControler : MonoBehaviour
 
 	Vector2 moveDirection;
 
-	float lastShootedTime = 0;
+	float lastShootedTime = -1;
 	private void Update()
 	{
 		moveDirection.x = Input.GetAxisRaw("Horizontal");
